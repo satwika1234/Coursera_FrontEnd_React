@@ -9,11 +9,18 @@ import {
 } from "reactstrap";
 
 class Menu extends Component {
+
   constructor(props) {
     super(props);
     this.state = {
       selectedDish: null,
     };
+
+    console.log('Menu Component Constructor is invoked')
+  }
+  componentDidMount(){
+    console.log('Menu ComponentDidMount is invoked')
+
   }
   onDishSelect(dish) {
     this.setState({ selectedDish: dish });
@@ -27,9 +34,9 @@ class Menu extends Component {
           <CardBody>
             <CardTitle>{dish.name}</CardTitle>
             <CardText>
-              <p>
+              
                 {dish.description}
-              </p>
+              
             </CardText>
           </CardBody>
         </Card>
@@ -51,6 +58,8 @@ class Menu extends Component {
         </div>
       );
     });
+    console.log('Menu Component render is invoked')
+
     return (
       <div className="container">
         <div className="row">
