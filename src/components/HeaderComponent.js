@@ -10,16 +10,16 @@ import {
 } from "reactstrap";
 import { NavLink } from "react-router-dom";
 class Header extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
-    this.state={
-      isNavOpen:false
+    this.state = {
+      isNavOpen: false,
     };
-    this.toggleNav=this.toggleNav.bind(this);
+    this.toggleNav = this.toggleNav.bind(this);
   }
-  toggleNav(){
+  toggleNav() {
     this.setState({
-      isNavOpen:!this.state.isNavOpen
+      isNavOpen: !this.state.isNavOpen,
     });
   }
   render() {
@@ -27,7 +27,8 @@ class Header extends Component {
       <>
         <Navbar dark expand="md">
           <div className="container">
-            <NavbarToggler onClick={this.toggleNav}/>            <NavbarBrand className="mr-auto" href="/">
+            <NavbarToggler onClick={this.toggleNav} />{" "}
+            <NavbarBrand className="mr-auto" href="/">
               <img
                 src="assests/images/logo.png"
                 height="30"
@@ -53,7 +54,7 @@ class Header extends Component {
                   </NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink className="nav-link" to="/contactus">
+                  <NavLink className="nav-link" to="/ContactUs">
                     <span className="fa fa-address-card fa-lg">
                       {" "}
                       Contact Us
