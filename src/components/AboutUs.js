@@ -22,7 +22,6 @@ function RenderLeader({ leaders }) {
                     <p>{leader.description}</p>
                 </Media>
                 </Media>
-                
             </Media>
             </div>
         );
